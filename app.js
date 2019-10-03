@@ -44,7 +44,7 @@ const displayGameResult = result => {
         loses++;
         return 'You lost.';
     } else if (result === 'draw') {
-        draws++;
+        draws++;   
         return 'The game was a draw.';
     }
 };
