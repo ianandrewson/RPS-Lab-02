@@ -37,7 +37,7 @@ const updateResultList = result => {
     let textForNewListItem = document.createTextNode(result);
     newListItem.appendChild(textForNewListItem);
     resultList.append(newListItem);
-}
+};
 
 const displayGameResult = result => {
     if (result === 'win') {
