@@ -8,6 +8,7 @@ const resultFieldUserThrow = document.getElementById('user-throw');
 const resultFieldCompThrow = document.getElementById('computer-throw');
 const winnerField = document.getElementById('who-won');
 const resultList = document.getElementById('result-list');
+const stats = document.getElementById('stats');
 
 //Set initial state
 let wins = 0;
@@ -24,6 +25,7 @@ playButton.addEventListener('click', () => {
     resultFieldUserThrow.textContent = userThrow;
     resultFieldCompThrow.textContent = compThrow;
     winnerField.textContent = displayGameResult(result);
+    stats.textContent = `Wins: ${wins} Loses: ${loses}, Draws: ${draws}`;
 
 
     //update result list
@@ -36,10 +38,13 @@ playButton.addEventListener('click', () => {
 
 const displayGameResult = result => {
     if (result === 'win') {
+        wins++;
         return 'You won!';
     } else if (result === 'lose') {
+        loses++;
         return 'You lost.';
     } else if (result === 'draw') {
+        draws++;
         return 'The game was a draw.';
     }
 };
