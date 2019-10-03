@@ -27,14 +27,17 @@ playButton.addEventListener('click', () => {
     winnerField.textContent = displayGameResult(result);
     stats.textContent = `Wins: ${wins} Loses: ${loses}, Draws: ${draws}`;
 
-
     //update result list
-    //generate to LI for OL
+    updateResultList(result);
+});
+
+//generate LI for OL
+const updateResultList = result => {
     let newListItem = document.createElement('li');
     let textForNewListItem = document.createTextNode(result);
     newListItem.appendChild(textForNewListItem);
     resultList.append(newListItem);
-});
+}
 
 const displayGameResult = result => {
     if (result === 'win') {
