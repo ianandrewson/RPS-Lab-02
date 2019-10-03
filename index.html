@@ -11,9 +11,21 @@
 
 <body>
     <h1>Rock Paper Scissors</h1>
+    <div id="rule-game-container">
+        <div class="rules">
         <h2>Rules</h2>
-            <p>Rules go here</p>
-        <h2>Game</h2>
+            <p>
+                Choose rock, paper, or scissors. <br>
+                The computer will randomly select one as well. <br>
+                Paper beats Rock. <br>
+                Rock beats Scissors. <br>
+                Scissors beats Paper. <br>
+
+            </p>
+        </div>
+        <div class="game">
+        <h2 id="game-title">Game</h2>
+            <section id="game-choices">
             <label id="rock">
                 Rock:
                 <input type="radio" name="rps" value="rock">
@@ -26,8 +38,12 @@
                 Scissors:
                 <input type="radio" name="rps" value="scissors">
             </label>
+        </section>
             <br>
             <button id="play-button">Play</button>
+        </div>
+    </div>
+        <div class="results">
         <h2>Results</h2>
         <!--Display of result of each game (can be text and/or images), should indicate what the computer threw and what the result was (win, loss, draw)-->
             <div>You threw: <span id="user-throw"></span>. The Computer threw: <span id ="computer-throw"></span>. </div>
@@ -36,6 +52,7 @@
             <ol id="result-list">
                 
             </ol>
+        </div>
     <script type="module" src="app.js"></script>
     <script type="module" src="get-random-throw.js"></script>
 </body>
